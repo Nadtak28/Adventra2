@@ -1,15 +1,19 @@
 
+import Routers from "./routes/routers"
+import Header from "./components/header&footer/header"
+import SignUp from "./pages/signUp"
+import Home from "./pages/home"
 function App() {
 
   return (
     <>
-    
+
+<Routers/>
     </>
   )
 }
 
 export default App
-
 
  {/* <div>
           nademo d5el 3eono

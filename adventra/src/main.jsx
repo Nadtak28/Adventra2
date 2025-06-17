@@ -4,12 +4,18 @@ import './index.css'
 import App from './App.jsx'
 import './i18n';
 import { Provider } from 'react-redux';
-import store from './store/store.js';
+import {store} from './store/store.js';
+import {BrowserRouter} from 'react-router-dom'
+import { GoogleOAuthProvider } from '@react-oauth/google';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
 <Provider store={store}>
-    <App />
+    <GoogleOAuthProvider clientId="1022286903151-3nc3lt020213ss42lrk1nu3qbr11bkfj.apps.googleusercontent.com">
+  <BrowserRouter>
+      <App />
+  </BrowserRouter>
+    </GoogleOAuthProvider>
 
 </Provider>
   </StrictMode>,

@@ -1,0 +1,13 @@
+function Breadcrumbs() {
+  return (
+    <div className="flex flex-wrap gap-2 p-4">
+      <a href="#" className="text-[#519489] text-base font-medium leading-normal">United States</a>
+      <span className="text-[#519489] text-base font-medium leading-normal">/</span>
+      <a href="#" className="text-[#519489] text-base font-medium leading-normal">San Francisco</a>
+      <span className="text-[#519489] text-base font-medium leading-normal">/</span>
+      <span className="text-[#0e1a18] text-base font-medium leading-normal">Experiences</span>
+    </div>
+  );
+}
+
+export default Breadcrumbs;
