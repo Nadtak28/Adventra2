@@ -1,8 +1,5 @@
 
 import Routers from "./routes/routers"
-import Header from "./components/header&footer/header"
-import SignUp from "./pages/signUp"
-import Home from "./pages/home"
 function App() {
 
   return (
