@@ -1,17 +1,19 @@
 import Card from "./card";
 
-
-const CardList = ({ title, items, isScrollable = false }) => {
-  const containerClass = isScrollable
-    ? "flex overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden p-4 gap-3"
-    : "grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4";
-
+const CardList = ({ title, items = [] }) => {
   return (
-    <div className="px-4 pb-3 pt-5">
-      <h2 className="text-[#101918] text-[22px] font-bold leading-tight tracking-[-0.015em]">{title}</h2>
-      <div className={containerClass}>
+    <div className="px-4 pb-6 pt-8">
+      <h2 className="text-[#101918] text-[24px] font-bold mb-4">{title}</h2>
+
+      <div className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth px-1 hover:cursor-pointer" >
         {items.map((item, index) => (
-          <Card key={index} image={item.image} title={item.title} description={item.description} />
+          <div key={index} className="min-w-[300px] max-w-[300px] flex-shrink-0">
+            <Card
+              image={item.image}
+              title={item.title}
+              description={item.description}
+            />
+          </div>
         ))}
       </div>
     </div>

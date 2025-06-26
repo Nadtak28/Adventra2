@@ -1,14 +1,15 @@
-
 const Card = ({ image, title, description }) => {
   return (
-    <div className="flex flex-col gap-3 pb-3">
+    <div className="rounded-2xl shadow-md overflow-hidden bg-white flex flex-col h-full">
       <div
-        className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+        className="aspect-video bg-cover bg-center w-full"
         style={{ backgroundImage: `url(${image})` }}
       ></div>
-      <div>
-        <p className="text-[#101918] text-base font-medium leading-normal">{title}</p>
-        <p className="text-[#578e85] text-sm font-normal leading-normal">{description}</p>
+      <div className="p-4 flex flex-col gap-1">
+        <p className="text-[#101918] text-lg font-semibold truncate">{title}</p>
+        <p className="text-[#578e85] text-sm leading-snug line-clamp-3">
+          {description}
+        </p>
       </div>
     </div>
   );

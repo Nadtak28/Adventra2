@@ -1,5 +1,7 @@
 
 export const API = {
+
+/////////////////////auth////////////////////////////
     generateUnverifiedUser: "/generateUnverifiedUser",
   register: "/register",
   resendVerificationCode: "/resendVerificationCode",
@@ -8,6 +10,9 @@ export const API = {
 auth_google_redirect:"auth/google/redirect",
 forgetPassword:"forgetPassword",
 checkCode:"checkCode",
-resetPasswordUsingCode:"resetPasswordUsingCode"
+resetPasswordUsingCode:"resetPasswordUsingCode",
+
+//////////////////////home//////////////////////////
+home:"/home"
 
 };

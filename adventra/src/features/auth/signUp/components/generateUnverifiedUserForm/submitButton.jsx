@@ -7,7 +7,7 @@ import {
 } from "../../hook/generateUnverifiedUserSlice";
 import { GenerateUnverifiedUserService } from "../../api/generateUnverifiedUserService";
 import { validateForm } from "../../../../../utils/validateForm";
-
+import { tokenStore } from "../../../../../utils/dataStore";
 export default function SubmitButton({ onSuccess }) {
   const dispatch = useDispatch();
   const formData = useSelector((state) => state.generateUnverifiedUser);
@@ -29,6 +29,10 @@ export default function SubmitButton({ onSuccess }) {
     const result = await dispatch(GenerateUnverifiedUserService(formData));
 
     if (GenerateUnverifiedUserService.fulfilled.match(result)) {
+        const token = result.payload.token;
+              tokenStore.saveToken(token);
+              console.log("............................................"+token);
+              console.log("✅ Token received:", token);
       onSuccess?.("loading");
       setTimeout(() => onSuccess?.("verify"), 2000);
     }

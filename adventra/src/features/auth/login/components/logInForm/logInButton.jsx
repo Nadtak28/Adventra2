@@ -25,6 +25,7 @@ export default function LogInButton({ onSuccess }) {
       if (result.type === "login/fulfilled") {
         const token = result.payload.token;
         tokenStore.saveToken(token);
+        console.log("............................................"+token);
         console.log("✅ Token received:", token);
 
         if (onSuccess) {
