@@ -20,9 +20,17 @@ function Header() {
           <a href="#" className="text-sm font-medium text-[#101918]">Home</a>
 
           </Link>
+
           <a href="#" className="text-sm font-medium text-[#101918]">Tours</a>
-          <a href="#" className="text-sm font-medium text-[#101918]">Events</a>
-          <a href="#" className="text-sm font-medium text-[#101918]">Cities</a>
+          <Link to="/events">
+                    <a href="#" className="text-sm font-medium text-[#101918]">Events</a>
+
+          </Link>
+          <Link to="/cities">
+                    <a href="#" className="text-sm font-medium text-[#101918]">Cities</a>
+          </Link>
+          
+          
           <a href="#" className="text-sm font-medium text-[#101918]">Guides</a>
         </nav>
       </div>

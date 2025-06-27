@@ -13,6 +13,10 @@ checkCode:"checkCode",
 resetPasswordUsingCode:"resetPasswordUsingCode",
 
 //////////////////////home//////////////////////////
-home:"/home"
+home:"/home",
+
+cities:"cities",
+
+events:"events",
 
 };

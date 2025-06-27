@@ -5,8 +5,10 @@ import  ResendVerificationCodeReducer from "../features/auth/signUp/hook/resendV
 import  LogInReducer  from "../features/auth/login/hook/logInSlice";
 import  ForgetPasswordReducer  from "../features/auth/forgetPassword/hook/forgetPasswordSlice";
 import  CheckCodeReducer  from "../features/auth/forgetPassword/hook/checkCodeSlice";
-import ResetPasswordReducer from "../features/auth/forgetPassword/hook/resetPasswordSlice"
+import ResetPasswordReducer from "../features/auth/forgetPassword/hook/resetPasswordSlice";
+import CitiesReducer from "../features/cities/hook/citiesSlice"
 import HomeReducer from "../features/home/hook/homeSlice"
+import EventsReducer from "../features/events/hook/eventsSlice"
 export const store = configureStore({
   reducer: {
     generateUnverifiedUser: GenerateUnverifiedUserReducer,
@@ -17,5 +19,7 @@ forgetPassword:ForgetPasswordReducer,
 checkCode:CheckCodeReducer,
 resetPassword:ResetPasswordReducer,
 home:HomeReducer,
+cities:CitiesReducer,
+events:EventsReducer,
   },
 });

@@ -6,7 +6,6 @@ export default function TopRatedGuideList({ guides }) {
           <div key={index} className="flex flex-col gap-4 text-center rounded-lg min-w-32 pt-4">
             <img
               src={guide.image || "/default-guide.jpg"} // Fallback image
-              alt={guide.name}
               className="rounded-full w-40 h-40 object-cover self-center"
             />
             <div>
