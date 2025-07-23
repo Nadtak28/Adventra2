@@ -6,7 +6,7 @@ const Moujaas = axios.create({
   headers: {
     "Accept":"application/json",
     "Content-Type":"application/json",
-    "Accept-Language":"er"
+    "Accept-Language":"ar"
   },
 });
 

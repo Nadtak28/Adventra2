@@ -16,14 +16,12 @@ export default function HeroSection() {
 
   const [index, setIndex] = useState(0);
 
-  // Dispatch EventsService only if not loading and no events yet
   useEffect(() => {
     if (!loading && events.length === 0) {
       dispatch(EventsService());
     }
   }, [dispatch, loading, events.length]);
 
-  // Cycle through events every 6 seconds
   useEffect(() => {
     if (!events.length) return;
 
@@ -69,7 +67,7 @@ export default function HeroSection() {
         <div className="w-1/2 flex flex-col justify-center pl-6 md:pl-20 pr-4 text-white">
           <motion.h1
             key={event?.name ?? "title"}
-            className="text-3xl md:text-5xl font-bold mb-4 text-white"
+            className="text-3xl md:text-5xl text-black font-bold mb-4 "
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}

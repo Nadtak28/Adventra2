@@ -1,11 +1,9 @@
-import Footer from '../components/header&footer/footer';
-import MainContent from '../features/guide/components/mainContent';
+import MainContent from "../features/guides/components/guide/main Content/mainContent";
 
 function Guide() {
   return (
-    <div className="relative flex size-full min-h-screen flex-col bg-[#f9fbfb] group/design-root overflow-x-hidden font-sans">
+    <div className="relative flex size-full min-h-screen flex-col  group/design-root overflow-x-hidden font-sans">
       <MainContent />
-      <Footer />
     </div>
   );
 }

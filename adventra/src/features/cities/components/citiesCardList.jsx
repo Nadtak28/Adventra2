@@ -19,10 +19,11 @@ export default function CitiesCardList() {
   }, [dispatch]);
 
   if (loading) return <div className="text-center py-8">Loading cities...</div>;
-  if (error) return <div className="text-center py-8 text-red-500">{error}</div>;
+  if (error)
+    return <div className="text-center py-8 text-red-500">{error}</div>;
 
   return (
-    <div className="p-6">
+    <div className="p-6 bg-white">
       <h2 className="text-2xl font-bold mb-4">Cities</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {(cities || []).map((city) => (

@@ -32,7 +32,9 @@ export default function MainContent() {
       }))
     );
   } else {
-    const categoryObj = eventsByCategory.find((cat) => cat.name === selectedCategory);
+    const categoryObj = eventsByCategory.find(
+      (cat) => cat.name === selectedCategory
+    );
     filteredEvents = categoryObj
       ? categoryObj.events.map((event) => ({
           title: event.name,
@@ -44,34 +46,37 @@ export default function MainContent() {
 
   // Prepare tabs: "All" + category names
   const tabs = ["All", ...eventsByCategory.map((cat) => cat.name)];
-console.log("latestTours////////////////////", latestTours);
-console.log("topEvents////////////////////", topEvents);
-console.log("featuredCities//////////////", featuredCities);
-console.log("filteredEvents//////////////", filteredEvents);
-console.log("topRatedGuides//////////////", topRatedGuides);
-  
+  console.log("latestTours////////////////////", latestTours);
+  console.log("topEvents////////////////////", topEvents);
+  console.log("featuredCities//////////////", featuredCities);
+  console.log("filteredEvents//////////////", filteredEvents);
+  console.log("topRatedGuides//////////////", topRatedGuides);
+
   return (
-    <main className="px-40 py-5 flex justify-center">
+    <main className="bg-white px-40 py-5 flex justify-center">
       <div className="max-w-[960px] w-full">
         <SearchBar placeholder="Search for tours, events, and more" />
 
-<CardList
-  title="Latest Group Tours"
-  items={latestTours.map((trip) => ({
-    title: trip.name,
-    description: trip.description,
-    image: trip.images?.[0]?.url || "/default-event.jpg",
-  }))}
-  isScrollable
-/>
-        <CardList title="Top-Rated Events" items={topEvents.map((trip) => ({
-    title: trip.name,
-    description: trip.description,
-    image: trip.images?.[0]?.url || "/default-event.jpg",
-  }))}
-  isScrollable />
+        <CardList
+          title="Latest Group Tours"
+          items={latestTours.map((trip) => ({
+            title: trip.name,
+            description: trip.description,
+            image: trip.images?.[0]?.url || "/default-event.jpg",
+          }))}
+          isScrollable
+        />
+        <CardList
+          title="Top-Rated Events"
+          items={topEvents.map((trip) => ({
+            title: trip.name,
+            description: trip.description,
+            image: trip.images?.[0]?.url || "/default-event.jpg",
+          }))}
+          isScrollable
+        />
 
- <h2 className="text-[#101918] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+        <h2 className="text-[#101918] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
           Events by-Type
         </h2>
         <TabNavigation
@@ -85,12 +90,15 @@ console.log("topRatedGuides//////////////", topRatedGuides);
           items={filteredEvents}
         />
 
-        <CardList title="Cities with Most Events" items={featuredCities.map((trip) => ({
-    title: trip.name,
-    description: trip.description,
-    image: trip.images?.[0]?.url || "/default-event.jpg",
-  }))}
-  isScrollable />
+        <CardList
+          title="Cities with Most Events"
+          items={featuredCities.map((trip) => ({
+            title: trip.name,
+            description: trip.description,
+            image: trip.images?.[0]?.url || "/default-event.jpg",
+          }))}
+          isScrollable
+        />
 
         <h2 className="text-[#101918] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
           Top-Rated Guides

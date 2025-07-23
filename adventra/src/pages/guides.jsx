@@ -1,6 +1,6 @@
-import MainContent from "../features/user/components/mainContent";
+import MainContent from "../features/guides//components/mainContent";
 
-function User() {
+function Guides() {
   return (
     <div className="relative flex size-full min-h-screen flex-col  group/design-root overflow-x-hidden font-sans">
       <MainContent />
@@ -8,4 +8,4 @@ function User() {
   );
 }
 
-export default User;
+export default Guides;
